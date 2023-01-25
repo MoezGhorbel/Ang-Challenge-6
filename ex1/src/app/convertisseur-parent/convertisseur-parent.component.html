@@ -1,0 +1,12 @@
+<div>
+    <label for="inputvalue">Insert Value :&nbsp;</label>
+    <input type="text" name="inputvalue" [(ngModel)]="valueToConvert">
+    <button type="button" (click)="OnClick()">Calculer (vch)</button>
+    <button type="button" (click)="Clicked()">Calculer (Outp)</button>
+</div>
+
+<p>Converted value from vch: {{ convertedValue }}</p>
+<p>Converted value from vch-outp: {{ convertedV }}</p>
+
+<app-convertisseur-child [valueToConvert]="valueToConvert" (convertedValue)="convertedVs($event)"></app-convertisseur-child>
+

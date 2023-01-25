@@ -1,0 +1,6 @@
+<app-actor *ngFor="let actor of listActors" [actor]="actor" (remove)="removeFromList($event)"
+    (favorite)="addToFavorites($event)" (unfavorite)="removeFromFavorites($event)" [isInFavorites]="false"></app-actor>
+<div *ngIf="favorites.length > 0">
+    <h2>Liste des favoris:&nbsp;</h2>
+    <app-actor *ngFor="let favorite of favorites" [actor]="favorite" [isInFavorites]="true"></app-actor>
+</div>

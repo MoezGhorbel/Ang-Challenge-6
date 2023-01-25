@@ -1,0 +1,8 @@
+<div>
+    <p>{{actor.firstName}} {{actor.lastName}}</p>
+    <button (click)="onRemove()" *ngIf="!isInFavorites">Supprimer</button>
+</div>
+<div *ngIf="!isInFavorites">
+    <label for="checkbox">Ajouter dans la liste des favoris&nbsp;</label>
+    <input type="checkbox" (change)="toggleFavorite()" [checked]="isFavorite">
+</div>
